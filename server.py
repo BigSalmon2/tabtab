@@ -33,7 +33,7 @@ def gpt2_url():
     encodedText = autoTokenizer.encode(context)
 
     headers = {'Content-Type': 'application/json; charset=utf-8'}
-    data = {"text": encodedText, "num_samples": 5, "length": 20}
+    data = {"text": encodedText, "num_samples": 10, "length": 20}
     response = requests.post(model_url, headers=headers, data=json.dumps(data))
     if response.status_code == 200:
         result = dict()
@@ -63,10 +63,10 @@ def gpt2():
 
     if length == 'short':
         times = random.randrange(2, 6)
-        data = {"text": context, "num_samples": 5, "length": times}
+        data = {"text": context, "num_samples": 10, "length": times}
 
     elif length == 'long':
-        data = {"text": context, "num_samples": 5, "length": 20}
+        data = {"text": context, "num_samples": 10, "length": 20}
 
     count = 0
     while True:
