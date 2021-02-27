@@ -283,7 +283,7 @@ p.bold {
     font-size: 16px;
     line-height: 28px;
 
-    word-spacing: 6px;
+    word-spacing: 0px;
 
     /* dark */
     background: rgba(26, 27, 31, 0.5);
